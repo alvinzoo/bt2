@@ -9,6 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <style>
+    /*单独放置*/
 	.navbar{
 		background:#FDFDFD;
 		}	
@@ -18,18 +19,23 @@
   <div id="max">
     <div class="container" style="padding:0;">
       <div class="active1">
+        <!-- head-img改叫profile-img好点 -->
           <div class="head-img"><img src="img/head-img.png" class="img-circle" style="weigth:100%; height:100%;"></div>
           <p class="head-texte text-center">何必问我</p>
       </div>
       <div class="main">
+        <!-- my-orders。。。 -->
           <div class="mybuy">
                   <a class="slide-link" href="#">
                    <img src="img/wd-012-1.png">
                    我的订单            <em>查看全部订单</em>
                   </a>
           </div>
+          <!-- 改名叫order-panel比较好 -->
           <div id="orders">
+            <!-- buy1 buy2你要人怎么猜。。 直接改叫表意的id，另外参考今天的需求，改叫OngoingOrders, SuspendedOrders... -->
           		<div id="buy1">
+                <!-- img-center -->
                 	<span class="imgcenter"><img src="img/daifukuan.png"></span>
                   	<span class="textcenter">待付款</span>
               </div>
@@ -47,6 +53,7 @@
                 </div>
           </div>
      </div>
+     <!-- mycard改叫profile-panel之类的是不是比较好，另外这里要加上id -->
        <div class="mycard">
                   <a class="slide-link" href="#">
                    <img src="img/erweima.png">
@@ -74,6 +81,7 @@
                   </a>
 
           </div>
+          <!-- 我的订单重复了，这一部分可以删掉 -->
         <div class="mycard">
                   <a class="slide-link" href="#">
                    <img src="img/wd-012-02.png">
@@ -100,6 +108,7 @@
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- main.js里面什么都没有 -->
 	<script src="js/main.js"></script>
   </body>
 </html>

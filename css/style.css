@@ -12,7 +12,9 @@ body{
 .stick{
 		margin-top: 0;
 	    position: fixed;
-        top: 61px;}
+        top: 61px;
+        /*width:100%;*/
+    }
 #footer{
 	height:60px;
 	background:#FFFFFF;}	

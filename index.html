@@ -9,9 +9,12 @@
 	<link href="css/style.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/jquery-labelauty.css">
     <style>
+    /*style最好不要写在一个文件里，如果统一的可以叫做style.css，如果是专门针对这个文件的可以另外开一个index.css之类的*/
 	body{ 
+      /*加占位符，不要给body加padding，第一是反直观，第二是可能和浏览器的缺省规则冲突。直接在顶上加一个61px高的空div就行了，叫做placeholder之类。*/
 	    padding-top:61px;
 	}
+  /*这RGB什么鬼。。。*/
     .carousel{#ecf0f1
 		height:150px;
 		background-color:#E8E6E6;
@@ -26,6 +29,7 @@
 	ul { list-style-type: none;}
 	li { display: inline-block;}
 	li { margin: 10px 0;}
+  /*折行好好折。。。。*/
 	input.labelauty + label { font: 12px "Microsoft Yahei";}
 	</style>
 <!-- <script src="js/prefixfree.min.js"></script>-->
@@ -34,6 +38,7 @@
   	<div class="active">
           <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
               <div class="container">
+                <!-- 这里需要一个id（暂时说OrderMethod，可以改），否则的话不好定位。你想一下，在进行请求的时候肯定需要访问这个状态，所以在js里面代码应该类似 OrderMethod == 0 or OrderMethod == 1 -->
               	<center>
                	<li class="top_menu"><input type="radio" name="radio" value="0" data-labelauty="体验一次"></li>
                 <li class="top_menu"><input type="radio" name="radio" value="1" data-labelauty="包月订购"></li>
@@ -41,6 +46,7 @@
              </div>
           </nav>
       </div>
+      <!-- roll命名不合理，直接叫Carousel或者MainCarousel之类都可以，一般id命名经常用骆驼命名法，首字母大写，类的话用-连接 -->
          <div id="roll" class="ad">
               <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators">
@@ -62,16 +68,19 @@
               </div>
           </div>
         <div id="mainMenuBarAnchor"></div>
+        <!-- product_first和product_1完全不知道在说什么，而且不应该用下划线，要用- -->
        <div class="product_first">
             <div class="product_1">
                 <img src="img/test10.jpg" width="100%" height="100%">
             </div>
        </div>
+       <!-- data-target应该用id，不用类 -->
         <div class="product" data-toggle="modal" data-target=".modal01" >
              <div class="product_1">
                 <img src="img/test01.jpg" width="100%" height="100%">
             </div>
 		</div>
+    <!-- id呢。。modal01肯定是id不是类，其他data-target类似 -->
         <div class="modal fade modal01" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   			<div class="modal-dialog modal-lg">
     		<div class="modal-content">
@@ -162,7 +171,7 @@
 	</script>
     
     <script>
-
+// 放在一起。。document.ready()写两次太奇怪了。。
 		$(document).ready(function() {
           // Cache selectors for faster performance.
           var $window = $(window),

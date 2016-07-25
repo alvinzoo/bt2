@@ -1,3 +1,5 @@
+<!-- 这个文件改名叫shopping-cart.html -->
+
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -32,6 +34,7 @@
 
     <div class="sys_item_spec">
         <div class="clearfix iteminfo_parameter sys_item_specpara" data-sid="2">
+            <!-- tishi是什么啊。。 -->
             <div id="tishi">购买方式</div>
            
                 <ul id="target_list">
@@ -40,7 +43,7 @@
                 </ul>
         </div>
      </div>
-
+<!-- mycard在之前说了，改一下名字 -->
     <div class="mycard">
     	 <a class="slide-link" href="#">
                    <img src="img/youhuijuan.png">
@@ -53,10 +56,12 @@
                    自提点选择：            
                   </a>
      </div>
+     <!-- orders2又胡乱命名。。 -->
     <div class="orders2">
     	  <p class="iteminfo_price text-right">合计： <b class="sys_item_price ">6.80</b>元</p>
     </div>
     <div class="orders_box">
+      <!-- bstyle.... -->
     	<div class="bstyle">
         	<button type="button" class="btn btn-default">删除订单</button>
     		<button type="button" class="btn btn-danger">提交订单</button>
@@ -67,6 +72,7 @@
     	<div class="container">
             <div class="row">
                 <div class="col-xs-4">
+                                    <!-- alt里面写上具体的东西 -->
                     <a href="index.html"><img src="img/icon-home01.png" class="img-responsive center-block imgh" alt="Responsive image"></a>
                 </div>
                 <div class="col-xs-4">
@@ -86,7 +92,7 @@
 		var array = [{name:'milk',abstract:'##########',price:'15'},{name:'leben',abstract:'+++++++++++',price:'16'}]
 		for(i= 0; i < 2; i++) {
 		$('.product:eq('+i+')').click(function() {
-			
+			// 之前说过的问题，p,h6等都不表意，换一下
 			$("#pro_detail p").text(array[i].name)
 			$("#pro_detail h6").text(array[i].abstract)
 			$("#pro_detail h6:last").text(array[i].price)
